@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>\(　　　　1.ある地点から初速 v_0 [m/s],角度 \thetaの方向に球を投げた。重力加速度の大きさをg[m^2/s]とし, \)</p>
+<p>\(　　　　　人間の高さを1.6[m], ゴールの高さを3.0[m], ゴールまでx[m]とする。\)</p>
+<p>\(　　　　　また、球の発射位置は人間の高さと等しく、球の大きさは無視できるものとし、\)</p>
+<p>\(　　　　　ゴールの位置に球が来たときにゴールしたものとする。以下の問いに答えよ\)</p>
+<p>\(　　　　　(1)　球が最高点に達するまでの時間t_1[s]をv_0,\theta,gを用いて答えよ\)　(難易度：易)</p>
+<p>\(　　　　　(2)　球が最高点に達した時の高さy_{max}[m]をv_0,\theta,gを用いて答えよ\)　(難易度：普通)</p>
+<p>\(　　　　　(3)　球が最高点に達したのちゴールするときの時間t_2[s]をv_0,\theta,gを用いて答えよ\)　(難易度：難)</p>
+<p>\(　　　　　　　また、その時のゴールまでの距離x[m]をv_0,\theta,gを用いて答えよ\)　(難易度：難)</p>
+<br>
+<p>\(　　　　　模範解答\)</p>
+<p>\(　　　　　(1)　縦の速度v_y=v_0sin\theta - gtより、\)</p>
+<p>\(　　　　　　　v_y=0　の時つまり　v_0sin\theta = gt_1　t_1に関して整理すると　t_1=\frac{v_0sin\theta}{g}\)</p>
+<p>\(　　　　　(2)　y=v_0sin\theta·t-\frac{1}{2}gt^2 + 1.6\)</p>
+<p>\(　　　　　　　　   =t(v_0sin\theta-\frac{1}{2}gt) + 1.6\)</p>
+<p>\(　　　　　　　　ここで(1)の式を代入\)</p>
+<p>\(　　　　　　　　   =\frac{v_0sin\theta}{g}(v_0sin\theta-\frac{1}{2}g\frac{v_0sin\theta}{g}) + 1.6\)</p>
+<p>\(　　　　　　　　   =\frac{v_0sin\theta}{g}·\frac{v_0sin\theta}{2}+1.6\)</p>
+<p>\(　　　　　　　　   =\frac{v_0^2sin^2\theta}{2g^2}+1.6\)</p>
+<p>\(　　　　　(3)　v_0sin\theta·t-\frac{1}{2}gt^2=3.0-1.6\)</p>
+<p>\(　　　　　　　\Rightarrow v_0sin\theta·t-\frac{1}{2}gt^2=1.4\)</p>
+<p>\(　　　　　　　\Rightarrow \frac{1}{2}gt^2-v_0sin\theta·t+1.4=0\)</p>
+<p>\(　　　　　　　tに関する二次方程式とみなして解くと\)</p>
+<p>\(　　　　　　　X=\frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)より、</p>
+<p>\(　　　　　　　t_2=\frac{v_0sin\theta+\sqrt{v_0^2sin^2\theta-2.8g}}{g}\)</p>
+<p>\(　　　　　　　x=v_0cos\theta t_2より、\)</p>
+<p>\(　　　　　　　x=\frac{v_0sin\theta+\sqrt{v_0^2sin^2\theta-2.8g}}{g}·v_0cos\theta\)</p>
+<p>\(　　　　　　　\Rightarrow x=\frac{v_0^2sin2\theta+2v_0cos\theta \sqrt{v_0^2sin^2\theta-2.8g}}{2g}\)</p>
+<p>\(　　　　　　　ちなみに、角度 \theta =45°でバスケコートのフリースローライン(4.6m)から投げるとすれば\)</p>
+<p>\(　　　　　　　4.6=\frac{v_0^2+\sqrt{2}v_0+\sqrt{\frac{1}{2}v_0^2 -2.8g}}{2g}\)</p>
+<p>\(　　　　　　　\Rightarrow 9.2g=v_0^2+\sqrt{2}v_0+\sqrt{\frac{1}{2}v_0^2 -2.8g}\)</p>
+<p>\(　　　　　　　\Rightarrow 90.16=v_0^2+\sqrt{2}v_0+\sqrt{\frac{1}{2}v_0^2 -27.44}\)</p>
+<p>\(　　　　　　　グラフを用いて大体の値を出すと　v=8.64735　となる。(v>0のもののみ有効)\)</p>
+<p>\(　　　　　　　なので約8.64m/sで45°の方向に投げればバスケゴールにシュートすることができる。\)</p>
+
+
+</body>
+</html>
