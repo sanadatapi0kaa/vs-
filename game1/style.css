@@ -1,0 +1,49 @@
+
+#head {
+    display: flex;
+}
+
+#click {
+    font-size: 20px;
+    margin-left: calc(50% - 30px);
+}
+
+#advice {
+    font-size: 20px;
+}
+
+#cir {
+        height: 300px;
+        width: 300px;
+        border-radius: 150px;
+        margin-top: 0px;
+        margin-left: calc(50vw - 150px);
+        color: #000000;
+        background: #FFFFFF;
+        border: #000000 1px solid;
+}
+
+#but1 {
+    text-align: center;
+    margin-top: 10px;
+    margin-left: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+    font-size: 15px;
+    color: black;
+    background: #aaa;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+#but1:hover {
+    background: #888;
+}
+
+#te, #te1 {
+    text-align: center;
+}
+
+#bb {
+    margin-left: 45%;
+}

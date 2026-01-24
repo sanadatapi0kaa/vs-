@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        if (window.innerHeight < 550 && window.innerWidth < 447) {
+            alert("play more big screen");
+            window.location.replace("https://google.com")
+        }
+    </script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>game</title>
+</head>
+<body>
+    <div id="head">
+        <p id="click">click↓</p>
+        <p id="advice"></p>
+    </div>
+    <div id="cir"></div>
+    <p id="te">#FFFFFF</p>
+    <p id="te1">16777216</p>
+    <button id="but1" onclick="but1()">auto <br> lv.0 0/s</button><br>
+    <button onclick="push()" id="bb">連打</button>
+    <button onclick="ris()" id="re">リセット</button>
+</body>
+</html>
