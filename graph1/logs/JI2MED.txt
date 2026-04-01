@@ -1,0 +1,6 @@
+   14 PH 2025-04-27 0916 JI2MED        59  P        JP6LSD/6      59  46M
+   14 CW 2025-04-27 2012 JI2MED        599 P        JS6TSE        599 47H
+   14 CW 2025-04-27 2013 JI2MED        599 P        JK8PBO        599 106M
+   14 CW 2025-04-27 2016 JI2MED        599 P        JR6RMV        599 47M
+   14 CW 2025-04-27 2028 JI2MED        599 P        JR8QFG        599 106M
+   14 PH 2025-04-27 2031 JI2MED        59  P        JR8YLF        59  106M

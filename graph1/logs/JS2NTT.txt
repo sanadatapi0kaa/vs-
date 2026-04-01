@@ -1,0 +1,10 @@
+    7 PH 2025-04-26 2115 JS2NTT        59  20L      JG2KSI        59  20H
+    7 PH 2025-04-27 0251 JS2NTT        59  20L      JE4YRL        59  33H
+    7 PH 2025-04-27 0254 JS2NTT        59  20L      JM1PIH        59  14H
+    7 PH 2025-04-27 0300 JS2NTT        59  20L      JA1YNA        59  10L
+    7 PH 2025-04-27 0320 JS2NTT        59  20L      JR8PPG        59  106H
+    7 PH 2025-04-27 0349 JS2NTT        59  20L      JI1PUC        59  10M
+    7 PH 2025-04-27 0352 JS2NTT        59  20L      JJ1YAF        59  14M
+    7 PH 2025-04-27 0654 JS2NTT        59  20L      JH1OGC        59  11M
+    7 PH 2025-04-27 0658 JS2NTT        59  20L      JL3VUL/3      59  27M
+    7 PH 2025-04-27 0714 JS2NTT        59  20L      JL1BWG/2      59  18M

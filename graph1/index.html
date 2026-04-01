@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ロググラフ描画</title>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        margin: 0;
+        padding: 20px;
+      }
+      .container {
+        width: 90%;
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+      }
+      button {
+        display: block;
+        width: 200px;
+        margin: 20px auto;
+        padding: 10px;
+        border: none;
+        background: #3498db;
+        color: white;
+        font-size: 16px;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #2980b9;
+      }
+      #status {
+        text-align: center;
+        margin-top: 10px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <select id="band">
+            <option value="1.9">1.9MHz</option>
+            <option value="3.5">3.5MHz</option>
+            <option value="7">7MHz</option>
+            <option value="14">14MHz</option>
+            <option value="21">21MHz</option>
+            <option value="28">28MHz</option>
+            <option value="50">50MHz</option>
+        </select>
+      <button id="loadBtn">ログを読み込んでグラフ描画</button>
+      <div id="status"></div>
+      <canvas id="chartCanvas" width="400" height="200"></canvas>
+      <canvas id="chartCanvas2" width="400" height="200"></canvas>
+    </div>
+    <script>
+let chart = null;
+let chart2 = null;
+
+document.getElementById("loadBtn").addEventListener("click", async () => {
+
+const band = document.getElementById("band").value;
+
+const res = await fetch("logs/JA1YAX.txt?" + Date.now());
+const text = await res.text();
+const res2 = await fetch("logs/JA1YLW.txt?" + Date.now());
+const text2 = await res2.text();
+
+const lines = text.trim().split("\n");
+const lines2 = text2.trim().split("\n");
+
+let data = {};
+let data2 = {};
+
+for (const line of lines) {
+
+    const p = line.trim().split(/\s+/);
+
+    const freq = p[0];
+    const mode = p[1];
+    const time = p[3];
+
+    if (freq !== band) continue;
+
+    const h = time.slice(0,2);
+    const m = parseInt(time.slice(2));
+
+    const m5 = Math.floor(m/5)*5;
+    const label = h + ":" + String(m5).padStart(2,"0");
+
+    if (!data[label]) {
+        data[label] = {CW:0,PH:0};
+    }
+
+    if (mode === "CW") data[label].CW++;
+    if (mode === "PH") data[label].PH++;
+
+}
+for (const line2 of lines2) {
+
+    const p = line2.trim().split(/\s+/);
+
+    const freq = p[0];
+    const mode = p[1];
+    const time = p[3];
+
+    if (freq !== band) continue;
+
+    const h = time.slice(0,2);
+    const m = parseInt(time.slice(2));
+
+    const m5 = Math.floor(m/5)*5;
+    const label = h + ":" + String(m5).padStart(2,"0");
+
+    if (!data2[label]) {
+        data2[label] = {CW:0,PH:0};
+    }
+
+    if (mode === "CW") data2[label].CW++;
+    if (mode === "PH") data2[label].PH++;
+
+}
+
+const labels = Object.keys(data).sort();
+const cw = labels.map(t => data[t].CW);
+const ph = labels.map(t => data[t].PH);
+const labels2 = Object.keys(data2).sort();
+const cw2 = labels2.map(t => data2[t].CW);
+const ph2 = labels2.map(t => data2[t].PH);
+
+if (chart) chart.destroy();
+if (chart2) chart2.destroy();
+
+const ctx = document.getElementById("chartCanvas").getContext("2d");
+const ctx2 = document.getElementById("chartCanvas2").getContext("2d");
+
+chart = new Chart(ctx,{
+type:"bar",
+data:{
+labels:labels,
+datasets:[
+{
+label:"CW",
+data:cw,
+backgroundColor:"blue"
+},
+{
+label:"PH",
+data:ph,
+backgroundColor:"red"
+}
+]
+},
+options:{
+responsive:true,
+scales:{
+x:{stacked:true},
+y:{stacked:true, max: 15}
+}
+}
+});
+
+chart2 = new Chart(ctx2,{
+type:"bar",
+data:{
+labels:labels2,
+datasets:[
+{
+label:"CW",
+data:cw2,
+backgroundColor:"blue"
+},
+{
+label:"PH",
+data:ph2,
+backgroundColor:"red"
+}
+]
+},
+options:{
+responsive:true,
+scales:{
+x:{stacked:true},
+y:{stacked:true, max: 15}
+}
+}
+});
+
+});
+    </script>
+  </body>
+</html>

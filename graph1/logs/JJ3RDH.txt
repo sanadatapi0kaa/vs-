@@ -1,0 +1,8 @@
+    7 PH 2025-04-27 0827 JJ3RDH        59  22L      7M4BEN        59  13H
+    7 PH 2025-04-27 0903 JJ3RDH        59  22L      7K3AOH        59  13H
+    7 PH 2025-04-27 1258 JJ3RDH        59  22L      JH4UYB        59  35H
+    7 PH 2025-04-27 1302 JJ3RDH        59  22L      JJ2YWM/2      59  20M
+    7 PH 2025-04-27 1321 JJ3RDH        59  22L      JA3YCC        59  27M
+    7 PH 2025-04-27 1505 JJ3RDH        59  22L      JA3QJA        59  27M
+    7 PH 2025-04-27 1529 JJ3RDH        59  22L      JA1ZBW        59  11L
+    7 PH 2025-04-27 1541 JJ3RDH        59  22L      JA1DCK/1      59  11M

@@ -1,0 +1,4 @@
+   21 PH 2025-04-27 1953 JA9NOF        59  28M      JR6TPD        59  47M
+   21 PH 2025-04-27 1954 JA9NOF        59  28M      JS6EAQ        59  47M
+   21 PH 2025-04-27 2002 JA9NOF        59  28M      JE4HUB/6      59  47P
+   21 PH 2025-04-27 2017 JA9NOF        59  28M      JS6TSE        59  47H
